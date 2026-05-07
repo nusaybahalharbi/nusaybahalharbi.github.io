@@ -1061,10 +1061,39 @@
             margin-bottom: 1.5rem;
         }
 
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
+    .project-link {
+            display: inline-flex;
+            align-items: center;
             gap: 0.5rem;
+            margin-top: 1.25rem;
+            padding: 0.6rem 1.2rem;
+            background: rgba(0, 194, 255, 0.1);
+            border: 1px solid rgba(0, 194, 255, 0.3);
+            border-radius: 8px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: var(--accent-cyan);
+            color: var(--bg-primary);
+            transform: translateY(-2px);
+        }
+
+        .project-link svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .project-card[dir="rtl"] {
+            text-align: right;
+        }
+
+        .project-card[dir="rtl"] .project-status {
+            direction: ltr;
         }
 
         .tech-tag {
@@ -1833,18 +1862,19 @@
         </div>
     </div>
 
-    <!-- AI Projects Section -->
+   <!-- AI Projects Section -->
     <section class="projects" id="projects">
         <div class="section-header">
             <span class="section-badge">Innovation</span>
             <h2 class="section-title">AI Projects</h2>
-<p class="section-subtitle">Building intelligent security and compliance solutions</p>        </div>
-       <div class="projects-grid">
+            <p class="section-subtitle">Building intelligent security and compliance solutions</p>
+        </div>
+        <div class="projects-grid">
             <div class="project-card animate-on-scroll">
                 <div class="project-status">Live Project</div>
                 <h3 class="project-title">GRC Expert</h3>
                 <p class="project-description">
-                    AI-powered cybersecurity compliance assistant covering 17+ regulatory frameworks. Enables instant querying of NCA, SDAIA, ISO, and SAMA controls with real control data embedded. Built with RAG architecture for accurate, source-grounded responses.
+                    A specialized AI assistant for cybersecurity professionals working with Saudi and international regulatory frameworks. Covers 17+ frameworks including NCA (ECC, CCC, CSCC, OTCC, DCC), SDAIA PDPL, SAMA, ISO 27001, and SOC 2 — with real control data embedded directly into the model's knowledge base. Built with RAG architecture to deliver accurate, source-grounded answers to compliance questions, control mappings, and gap analysis queries in seconds.
                 </p>
                 <div class="project-tech">
                     <span class="tech-tag">RAG</span>
@@ -1853,12 +1883,17 @@
                     <span class="tech-tag">Vercel</span>
                     <span class="tech-tag">React</span>
                 </div>
+                <a href="https://grc-expert.vercel.app/" target="_blank" class="project-link">
+                    Visit GRC Expert
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
+                </a>
             </div>
-            <div class="project-card animate-on-scroll">
+
+            <div class="project-card animate-on-scroll" dir="rtl">
                 <div class="project-status">Live Project</div>
-                <h3 class="project-title">Shafee (شفيع)</h3>
+                <h3 class="project-title">شفيع (Shafee)</h3>
                 <p class="project-description">
-                    RAG-powered Quran research assistant with semantic search over 6,236 verses. Features strict source verification, adhkar components, and Arabic-first design. Demonstrates advanced retrieval and embedding techniques for religious text analysis.
+                    خلال عملي على نماذج الذكاء الاصطناعي، اكتشفتُ ثغرة مقلقة: هذه النماذج، رغم قوتها، يمكن التلاعب بها بسهولة لإنتاج محتوى ديني محرَّف — آيات مختلقة، تفسيرات مغلوطة، وأحاديث منسوبة لمصادر موثوقة دون أساس. من هنا وُلد "شفيع": مساعد بحث قرآني مبني على مبدأ واحد — الموثوقية قبل كل شيء. يعتمد فقط على مصادر معتمدة كتفسير ابن كثير وصحيح البخاري، ومُصمَّم ليمنع أي تحريف أو اختلاق. هدفه أن يُجيب بشكل صحيح، أو لا يُجيب على الإطلاق.
                 </p>
                 <div class="project-tech">
                     <span class="tech-tag">RAG</span>
@@ -1866,12 +1901,17 @@
                     <span class="tech-tag">Semantic Search</span>
                     <span class="tech-tag">Next.js</span>
                 </div>
+                <a href="https://shafeie.vercel.app/" target="_blank" class="project-link">
+                    زيارة شفيع
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" /></svg>
+                </a>
             </div>
+
             <div class="project-card animate-on-scroll">
                 <div class="project-status">Research — NCA Grant</div>
                 <h3 class="project-title">Enhancing SOC Level 1 with AI</h3>
                 <p class="project-description">
-                    Research initiative funded by the NCA Cybersecurity Research and Innovation Pioneer Grants. Focused on improving Security Operations Center (SOC) Level 1 performance using AI for faster threat triage, alert prioritization, and automated response workflows.
+                    Research initiative funded by the NCA Cybersecurity Research and Innovation Pioneer Grants, exploring how AI can transform Tier 1 Security Operations Center workflows. Focused on reducing analyst fatigue and mean-time-to-respond through intelligent alert triage, automated threat correlation, and contextual prioritization — turning raw SIEM noise into actionable intelligence faster than traditional manual review.
                 </p>
                 <div class="project-tech">
                     <span class="tech-tag">SOC</span>
@@ -1880,11 +1920,12 @@
                     <span class="tech-tag">Automation</span>
                 </div>
             </div>
+
             <div class="project-card animate-on-scroll">
                 <div class="project-status">Research</div>
                 <h3 class="project-title">Traffic Signal Security</h3>
                 <p class="project-description">
-                    Specialized research on cybersecurity vulnerabilities in smart traffic signal systems. Examining attack vectors, developing threat models, and recommending security controls for critical transportation infrastructure in smart city environments.
+                    Specialized research examining cybersecurity vulnerabilities in smart traffic signal systems within smart city environments. Identifies attack vectors against connected traffic infrastructure, develops realistic threat models, and proposes layered security controls to protect transportation networks — a critical but often overlooked component of national infrastructure resilience.
                 </p>
                 <div class="project-tech">
                     <span class="tech-tag">ICS/OT</span>
@@ -1894,7 +1935,6 @@
             </div>
         </div>
     </section>
-
     <!-- Skills Section -->
     <section id="skills">
         <div class="section-header">
