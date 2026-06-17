@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>document.documentElement.classList.add('js');</script>
     <style>
         :root {
             --bg-primary: #0B1120;
@@ -34,10 +35,6 @@
         html {
             scroll-behavior: smooth;
             -webkit-text-size-adjust: 100%;
-        }
-
-        body.modal-open {
-            overflow: hidden;
         }
 
         body {
@@ -765,218 +762,6 @@
             color: var(--text-primary);
         }
 
-        /* CV Section */
-        .cv-section {
-            background: linear-gradient(180deg, transparent 0%, rgba(0, 194, 255, 0.03) 50%, transparent 100%);
-        }
-
-        .cv-container {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .cv-preview {
-            background: var(--bg-glass);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            padding: 3rem;
-            margin-bottom: 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .cv-preview:hover {
-            border-color: var(--accent-cyan);
-        }
-
-        .cv-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, rgba(0, 194, 255, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-        }
-
-        .cv-icon svg {
-            width: 40px;
-            height: 40px;
-            stroke: var(--accent-cyan);
-        }
-
-        .cv-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .cv-subtitle {
-            color: var(--text-secondary);
-            font-size: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .cv-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* CV Modal - desktop (LARGER) */
-        .cv-modal-content {
-            width: 95%;
-            max-width: 1400px;
-            height: 95vh;
-            height: 95dvh;
-            background: var(--bg-secondary);
-            border-radius: 16px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .cv-modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 1.5rem;
-            background: var(--bg-card);
-            border-bottom: 1px solid var(--border-color);
-            gap: 0.75rem;
-            flex-shrink: 0;
-        }
-
-        .cv-modal-header h3 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.1rem;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .cv-modal-actions {
-            display: flex;
-            gap: 0.5rem;
-            flex-shrink: 0;
-        }
-
-        .cv-modal-btn {
-            padding: 0.5rem 1rem;
-            background: var(--accent-gradient);
-            border: none;
-            border-radius: 6px;
-            color: var(--bg-primary);
-            font-weight: 500;
-            font-size: 0.85rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-decoration: none;
-            white-space: nowrap;
-            transition: all 0.3s ease;
-        }
-
-        .cv-modal-btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .cv-modal-btn svg {
-            width: 16px;
-            height: 16px;
-        }
-
-        .cv-modal-close {
-            width: 40px;
-            height: 40px;
-            background: transparent;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            color: var(--text-primary);
-            font-size: 1.5rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            transition: all 0.3s ease;
-        }
-
-        .cv-modal-close:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--accent-cyan);
-        }
-
-        .cv-embed {
-            flex: 1;
-            width: 100%;
-            border: none;
-            background: white;
-        }
-
-        /* Mobile CV - keep modal popup but make it iPhone friendly */
-        .cv-mobile-fallback {
-            display: none;
-            flex: 1;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 1.5rem 1rem;
-            text-align: center;
-            gap: 1rem;
-            overflow-y: auto;
-        }
-
-        .cv-mobile-fallback .cv-mobile-preview {
-            width: 100%;
-            flex: 1;
-            min-height: 0;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            background: white;
-            overflow: hidden;
-        }
-
-        .cv-mobile-fallback .cv-mobile-preview iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .cv-mobile-fallback h4 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.1rem;
-        }
-
-        .cv-mobile-fallback p {
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            max-width: 400px;
-        }
-
-        .cv-mobile-actions {
-            display: flex;
-            flex-direction: row;
-            gap: 0.75rem;
-            width: 100%;
-            max-width: 400px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .cv-mobile-actions .btn {
-            flex: 1;
-            min-width: 140px;
-            padding: 0.75rem 1rem;
-            font-size: 0.85rem;
-            min-height: 44px;
-        }
-
         /* AI Projects Section */
         .projects {
             background: linear-gradient(180deg, transparent 0%, rgba(139, 92, 246, 0.03) 50%, transparent 100%);
@@ -1262,7 +1047,7 @@
         }
 
         /* Scroll animations */
-        .animate-on-scroll {
+        .js .animate-on-scroll {
             opacity: 0;
             transform: translateY(40px);
             transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1298,14 +1083,6 @@
             .contact-links { flex-direction: column; align-items: center; }
             .contact-link { width: 100%; max-width: 300px; justify-content: center; }
 
-            /* CV Modal mobile - larger, keep popup behavior */
-            .cv-modal-content { width: 100%; height: 100vh; height: 100dvh; border-radius: 12px; max-width: 100%; }
-            .cv-modal-header { padding: 0.75rem 1rem; }
-            .cv-modal-header h3 { font-size: 0.95rem; max-width: 150px; }
-            .cv-modal-btn { padding: 0.5rem 0.75rem; font-size: 0.8rem; }
-            .cv-modal-btn span { display: none; }
-            .cv-embed { display: none; }
-            .cv-mobile-fallback { display: flex; }
             footer { flex-direction: column; gap: 1rem; text-align: center; }
         }
 
@@ -1356,7 +1133,6 @@
             <li><a href="#certifications">Certifications</a></li>
             <li><a href="#projects">AI Projects</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#cv">CV</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -1812,8 +1588,6 @@
         </div>
     </div>
 
-  
-    
    <!-- AI Projects Section -->
     <section class="projects" id="projects">
         <div class="section-header">
@@ -2006,55 +1780,15 @@
             document.body.style.overflow = '';
         }
 
-        // CV Modal Functions
-        function openCV() {
-            openCVModal();
-        }
-
-        function openCVModal() {
-            const modal = document.getElementById('cvModal');
-            const desktopEmbed = document.getElementById('cvEmbed');
-            const mobileEmbed = document.getElementById('cvMobileEmbed');
-            const pdfUrl = 'assets/cv/Nusaybah_AlHarbi_CV.pdf';
-            
-            desktopEmbed.src = pdfUrl;
-            
-            // Better preview for iPhone/Safari when hosted on GitHub Pages
-            if (window.location.protocol === 'file:') {
-                mobileEmbed.src = pdfUrl;
-            } else {
-                const fullUrl = new URL(pdfUrl, window.location.href).href;
-                mobileEmbed.src = 'https://docs.google.com/gview?url=' + encodeURIComponent(fullUrl) + '&embedded=true';
-            }
-            
-            modal.classList.add('active');
-            document.body.classList.add('modal-open');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeCVModal() {
-            const modal = document.getElementById('cvModal');
-            modal.classList.remove('active');
-            document.getElementById('cvEmbed').src = '';
-            document.getElementById('cvMobileEmbed').src = '';
-            document.body.classList.remove('modal-open');
-            document.body.style.overflow = '';
-        }
-
         // Close modals on overlay click
         document.getElementById('certModal').addEventListener('click', function(e) {
             if (e.target === this) closeCertModal();
-        });
-
-        document.getElementById('cvModal').addEventListener('click', function(e) {
-            if (e.target === this) closeCVModal();
         });
 
         // Close modals on Escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') {
                 closeCertModal();
-                closeCVModal();
             }
         });
 
@@ -2071,24 +1805,31 @@
         });
 
         // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+        const animatedEls = document.querySelectorAll('.animate-on-scroll');
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, index * 100);
-                }
+        if ('IntersectionObserver' in window) {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, index * 100);
+                    }
+                });
+            }, observerOptions);
+
+            animatedEls.forEach(el => {
+                observer.observe(el);
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            observer.observe(el);
-        });
+        } else {
+            // Fallback: if IntersectionObserver is unavailable, show everything
+            animatedEls.forEach(el => el.classList.add('visible'));
+        }
 
         // Parallax effect for orbs
         document.addEventListener('mousemove', (e) => {
