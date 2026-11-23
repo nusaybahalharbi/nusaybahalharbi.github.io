@@ -1426,34 +1426,6 @@
         .modal-content { border: 1px solid rgba(37,245,139,.25); background: #03111f; box-shadow: 0 30px 120px rgba(0,0,0,.65); }
         .modal-close { background: var(--green); color: #010508; }
 
-        .language-switch {
-            display: inline-flex;
-            align-items: center;
-            gap: .3rem;
-            padding: .3rem;
-            margin-inline-start: 1rem;
-            border: 1px solid rgba(37,245,139,.2);
-            border-radius: 999px;
-            background: rgba(255,255,255,.035);
-        }
-        .lang-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: .38rem;
-            min-height: 38px;
-            padding: .45rem .7rem;
-            border: 0;
-            border-radius: 999px;
-            color: var(--text-secondary);
-            background: transparent;
-            font: 700 .76rem 'Sora', sans-serif;
-            cursor: pointer;
-            transition: color .25s ease, background .25s ease, box-shadow .25s ease;
-        }
-        .lang-btn .flag { font-size: 1rem; line-height: 1; }
-        .lang-btn:hover { color: var(--white); background: rgba(255,255,255,.06); }
-        .lang-btn.active { color: #010508; background: var(--green); box-shadow: 0 0 24px rgba(37,245,139,.22); }
-
         html[dir="rtl"] body { font-family: Tahoma, Arial, sans-serif; }
         html[dir="rtl"] .hero-content,
         html[dir="rtl"] .about-text,
@@ -1497,8 +1469,6 @@
                 transition: transform .35s cubic-bezier(.22,1,.36,1), opacity .25s ease;
             }
             nav.nav-hidden { transform: translate(-50%, calc(-115% - env(safe-area-inset-top))); opacity: .2; }
-            .language-switch { margin-inline-start: auto; }
-            .lang-btn { min-height: 36px; padding: .4rem .58rem; }
             .hero { padding-top: calc(8.5rem + env(safe-area-inset-top)); }
             html[dir="rtl"] .hero h1 { font-size: clamp(2.5rem, 9vw, 4rem); }
             .hero-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: .75rem; }
@@ -1547,10 +1517,6 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="language-switch" role="group" aria-label="Language selection">
-            <button class="lang-btn active" type="button" data-lang="en" aria-label="Switch to English" aria-pressed="true"><span class="flag" aria-hidden="true">🇺🇸</span><span>EN</span></button>
-            <button class="lang-btn" type="button" data-lang="ar" aria-label="التبديل إلى العربية" aria-pressed="false"><span class="flag" aria-hidden="true">🇸🇦</span><span>عربي</span></button>
-        </div>
     </nav>
 
     <!-- Hero Section -->

@@ -228,24 +228,9 @@
             if (element) element.setAttribute(item.attr, isArabic ? item.ar : item.en);
         });
 
-        document.querySelectorAll('.lang-btn').forEach(button => {
-            const active = button.dataset.lang === lang;
-            button.classList.toggle('active', active);
-            button.setAttribute('aria-pressed', String(active));
-        });
-
-        const languageGroup = document.querySelector('.language-switch');
-        if (languageGroup) languageGroup.setAttribute('aria-label', isArabic ? 'اختيار اللغة' : 'Language selection');
-
-        localStorage.setItem('portfolio-language', lang);
         if (typeof filterCredentials === 'function') filterCredentials();
     }
 
-    document.querySelectorAll('.lang-btn').forEach(button => {
-        button.addEventListener('click', () => setLanguage(button.dataset.lang));
-    });
-
-    const saved = localStorage.getItem('portfolio-language');
-    const initial = saved === 'ar' || saved === 'en' ? saved : (navigator.language.toLowerCase().startsWith('ar') ? 'ar' : 'en');
+    const initial = navigator.language.toLowerCase().startsWith('ar') ? 'ar' : 'en';
     setLanguage(initial);
 })();
