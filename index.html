@@ -1311,7 +1311,7 @@
             --glow-purple: 0 20px 65px rgba(37, 245, 139, .2);
         }
 
-        html { overflow-x: hidden; }
+        html { overflow-x: hidden; background: #010508; overscroll-behavior-y: none; }
 
         body {
             background: radial-gradient(circle at 8% 8%, rgba(37,245,139,.10), transparent 26rem), radial-gradient(circle at 91% 15%, rgba(24,119,216,.16), transparent 30rem), #010508;
@@ -1405,7 +1405,7 @@
         .credential-search:focus, .credential-filter:focus { border-color: var(--green); }
         .credential-filter { background: #03111f; }
         .cert-card::before { height: 4px; background: linear-gradient(90deg,var(--green),var(--blue)); }
-        .cert-card.latest::after { background: var(--green); color: #010508; }
+        .cert-card.latest::after { content: var(--latest-label, 'LATEST'); background: var(--green); color: #010508; }
         .cert-image-container { background: #edf7f8; }
         .cert-view-btn { background: linear-gradient(110deg,var(--green),var(--blue)); color: #02171f; }
         .cert-year { color: var(--green); }
@@ -1425,14 +1425,79 @@
         .modal-content { border: 1px solid rgba(37,245,139,.25); background: #03111f; box-shadow: 0 30px 120px rgba(0,0,0,.65); }
         .modal-close { background: var(--green); color: #010508; }
 
+        .language-switch {
+            display: inline-flex;
+            align-items: center;
+            gap: .3rem;
+            padding: .3rem;
+            margin-inline-start: 1rem;
+            border: 1px solid rgba(37,245,139,.2);
+            border-radius: 999px;
+            background: rgba(255,255,255,.035);
+        }
+        .lang-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: .38rem;
+            min-height: 38px;
+            padding: .45rem .7rem;
+            border: 0;
+            border-radius: 999px;
+            color: var(--text-secondary);
+            background: transparent;
+            font: 700 .76rem 'Sora', sans-serif;
+            cursor: pointer;
+            transition: color .25s ease, background .25s ease, box-shadow .25s ease;
+        }
+        .lang-btn .flag { font-size: 1rem; line-height: 1; }
+        .lang-btn:hover { color: var(--white); background: rgba(255,255,255,.06); }
+        .lang-btn.active { color: #010508; background: var(--green); box-shadow: 0 0 24px rgba(37,245,139,.22); }
+
+        html[dir="rtl"] body { font-family: Tahoma, Arial, sans-serif; }
+        html[dir="rtl"] .hero-content,
+        html[dir="rtl"] .about-text,
+        html[dir="rtl"] .highlight-card,
+        html[dir="rtl"] .experience-card,
+        html[dir="rtl"] .cert-content,
+        html[dir="rtl"] .project-card,
+        html[dir="rtl"] .skill-category { text-align: right; }
+        html[dir="rtl"] .hero h1,
+        html[dir="rtl"] .section-title,
+        html[dir="rtl"] .contact-title,
+        html[dir="rtl"] .about-text h3,
+        html[dir="rtl"] .experience-title { font-family: Tahoma, Arial, sans-serif; letter-spacing: 0; }
+        html[dir="rtl"] .hero-kicker,
+        html[dir="rtl"] .section-badge,
+        html[dir="rtl"] .experience-date,
+        html[dir="rtl"] .exp-tag { font-family: Tahoma, Arial, sans-serif; letter-spacing: 0; }
+        html[dir="rtl"] .hero-description { margin-right: 0; margin-left: auto; }
+        html[dir="rtl"] .hero-cta { justify-content: flex-start; }
+        html[dir="rtl"] .stat { text-align: right; }
+        html[dir="rtl"] .experience-timeline::before { right: 0; left: auto; }
+        html[dir="rtl"] .experience-item { padding-right: 3rem; padding-left: 0; }
+        html[dir="rtl"] .experience-dot { right: -6px; left: auto; }
+        html[dir="rtl"] .experience-card:hover { transform: translateX(-8px); }
+        html[dir="rtl"] .cert-card.latest::after { right: auto; left: 1rem; }
+        html[dir="rtl"] .credential-search,
+        html[dir="rtl"] .credential-filter { text-align: right; }
+        html[dir="rtl"] .project-card[dir="rtl"] { direction: rtl; }
+        html[dir="ltr"] .project-card[dir="rtl"] { direction: ltr; }
+
         @media (max-width: 900px) {
             nav { width: calc(100% - 1rem); margin-top: .4rem; }
             .hero::after { width: 58vw; right: -22vw; top: 25%; opacity: .55; }
             .hero h1 { font-size: clamp(3rem,14vw,5.5rem); }
         }
         @media (max-width: 600px) {
-            nav { border-radius: .75rem; }
-            .hero { padding-top: 8.5rem; }
+            nav {
+                top: max(.5rem, env(safe-area-inset-top));
+                border-radius: .75rem;
+                transition: transform .35s cubic-bezier(.22,1,.36,1), opacity .25s ease;
+            }
+            nav.nav-hidden { transform: translate(-50%, calc(-115% - env(safe-area-inset-top))); opacity: .2; }
+            .language-switch { margin-inline-start: auto; }
+            .lang-btn { min-height: 36px; padding: .4rem .58rem; }
+            .hero { padding-top: calc(8.5rem + env(safe-area-inset-top)); }
             .hero-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: .75rem; }
             .stat-number { font-size: 1.9rem; }
             .stat-label { font-size: .72rem; line-height: 1.35; }
@@ -1479,6 +1544,10 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="language-switch" role="group" aria-label="Language selection">
+            <button class="lang-btn active" type="button" data-lang="en" aria-label="Switch to English" aria-pressed="true"><span class="flag" aria-hidden="true">🇺🇸</span><span>EN</span></button>
+            <button class="lang-btn" type="button" data-lang="ar" aria-label="التبديل إلى العربية" aria-pressed="false"><span class="flag" aria-hidden="true">🇸🇦</span><span>عربي</span></button>
+        </div>
     </nav>
 
     <!-- Hero Section -->
@@ -1675,13 +1744,6 @@
 
         <div class="credential-toolbar animate-on-scroll" role="search">
             <input class="credential-search" id="credentialSearch" type="search" placeholder="Search credentials, issuers, or skills…" aria-label="Search certifications">
-            <select class="credential-filter" id="credentialYear" aria-label="Filter certifications by year">
-                <option value="all">All years</option>
-                <option value="2026">2026</option>
-                <option value="2025">2025</option>
-                <option value="2024">2024</option>
-                <option value="2023">2023</option>
-            </select>
         </div>
 
         <div class="certs-grid">
@@ -2259,7 +2321,7 @@
             const titleEl = document.getElementById('certModalTitle');
             
             image.src = imageSrc;
-            titleEl.textContent = title;
+            titleEl.textContent = window.portfolioTranslate ? window.portfolioTranslate(title) : title;
             modal.classList.add('active');
             modal.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
@@ -2298,21 +2360,29 @@
         document.getElementById('copyrightYear').textContent = new Date().getFullYear();
 
         const credentialSearch = document.getElementById('credentialSearch');
-        const credentialYear = document.getElementById('credentialYear');
         const credentialCards = [...document.querySelectorAll('.cert-card')];
 
         function filterCredentials() {
             const query = credentialSearch.value.trim().toLowerCase();
-            const year = credentialYear.value;
             credentialCards.forEach(card => {
                 const text = card.textContent.toLowerCase();
-                const cardYear = card.querySelector('.cert-year')?.textContent.trim();
-                card.hidden = !text.includes(query) || (year !== 'all' && cardYear !== year);
+                card.hidden = !text.includes(query);
             });
         }
 
         credentialSearch.addEventListener('input', filterCredentials);
-        credentialYear.addEventListener('change', filterCredentials);
+
+        // On small screens, keep the header out of the content while scrolling down.
+        const siteNav = document.querySelector('nav');
+        let lastScrollY = window.scrollY;
+        window.addEventListener('scroll', () => {
+            const currentY = Math.max(window.scrollY, 0);
+            const scrollingDown = currentY > lastScrollY + 5;
+            const scrollingUp = currentY < lastScrollY - 5;
+            if (window.innerWidth <= 600 && scrollingDown && currentY > 110) siteNav.classList.add('nav-hidden');
+            if (scrollingUp || currentY <= 110 || window.innerWidth > 600) siteNav.classList.remove('nav-hidden');
+            lastScrollY = currentY;
+        }, { passive: true });
 
         document.addEventListener('pointermove', event => {
             document.documentElement.style.setProperty('--pointer-x', `${event.clientX}px`);
@@ -2370,5 +2440,6 @@
             });
         });
     </script>
+    <script src="i18n.js"></script>
 </body>
 </html>
