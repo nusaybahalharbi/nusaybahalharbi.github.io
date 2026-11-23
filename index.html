@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="Portfolio of Nusaybah AlHarbi, a Riyadh-based cybersecurity lead specializing in GRC, Saudi regulatory frameworks, digital forensics, and AI-powered security solutions.">
+    <meta name="theme-color" content="#0B1120">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://nusaybahalharbi.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nusaybahalharbi.com/">
+    <meta property="og:title" content="Nusaybah AlHarbi | Cybersecurity Lead">
+    <meta property="og:description" content="Cybersecurity leadership, GRC, Saudi regulatory frameworks, digital forensics, and AI-powered security solutions.">
+    <meta name="twitter:card" content="summary">
     <title>Nusaybah AlHarbi | Cybersecurity Lead</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,6 +53,26 @@
             line-height: 1.7;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
+        }
+
+        .skip-link {
+            position: fixed;
+            left: 1rem;
+            top: 1rem;
+            z-index: 10000;
+            padding: .75rem 1rem;
+            color: #07111f;
+            background: var(--accent-cyan);
+            border-radius: .5rem;
+            transform: translateY(-160%);
+            transition: transform .2s ease;
+        }
+
+        .skip-link:focus { transform: translateY(0); }
+
+        :focus-visible {
+            outline: 3px solid var(--accent-cyan);
+            outline-offset: 4px;
         }
 
         /* Animated background */
@@ -1117,6 +1146,7 @@
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="bg-grid"></div>
     <div class="bg-orbs">
         <div class="orb orb-1"></div>
@@ -1138,6 +1168,7 @@
     </nav>
 
     <!-- Hero Section -->
+    <main id="main-content">
     <section class="hero">
         <div class="hero-content">
            
@@ -1602,9 +1633,9 @@
     </section>
 
     <!-- Certificate Modal -->
-    <div class="modal-overlay" id="certModal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeCertModal()">×</button>
+    <div class="modal-overlay" id="certModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="certModalTitle">
+        <div class="modal-content" role="document">
+            <button class="modal-close" onclick="closeCertModal()" aria-label="Close certificate preview">×</button>
             <img src="" alt="Certificate" class="modal-image" id="certModalImage">
             <h3 class="modal-title" id="certModalTitle"></h3>
         </div>
@@ -1776,10 +1807,11 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer>
-        <div>© 2025 Nusaybah AlHarbi. All rights reserved.</div>
+        <div>© <span id="copyrightYear">2026</span> Nusaybah AlHarbi. All rights reserved.</div>
         <div>Riyadh, Saudi Arabia</div>
     </footer>
 
@@ -1793,12 +1825,15 @@
             image.src = imageSrc;
             titleEl.textContent = title;
             modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
+            modal.querySelector('.modal-close').focus();
         }
 
         function closeCertModal() {
             const modal = document.getElementById('certModal');
             modal.classList.remove('active');
+            modal.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = '';
         }
 
@@ -1813,6 +1848,18 @@
                 closeCertModal();
             }
         });
+
+        // Improve image performance without hiding certificate details from search engines.
+        document.querySelectorAll('.cert-image').forEach(image => {
+            image.loading = 'lazy';
+            image.decoding = 'async';
+        });
+
+        document.querySelectorAll('a[target="_blank"]').forEach(link => {
+            link.rel = 'noopener noreferrer';
+        });
+
+        document.getElementById('copyrightYear').textContent = new Date().getFullYear();
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
