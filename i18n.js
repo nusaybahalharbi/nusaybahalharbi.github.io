@@ -7,10 +7,10 @@
         "AI Projects": "مشاريع الذكاء الاصطناعي",
         "Skills": "المهارات",
         "Contact": "تواصل معي",
-        "OPEN TO HIGH-IMPACT SECURITY & AI COLLABORATIONS": "متاحة لتعاونات نوعية في الأمن السيبراني والذكاء الاصطناعي",
-        "Cybersecurity": "قائدة أمن",
+        "OPEN TO HIGH-IMPACT SECURITY & AI COLLABORATIONS": "تعاون نوعي في الأمن السيبراني والذكاء الاصطناعي",
+        "Cybersecurity": "أمن",
         "Lead": "سيبراني",
-        "& AI Innovator": "ومبتكرة في الذكاء الاصطناعي",
+        "& AI Innovator": "وابتكار في الذكاء الاصطناعي",
         "Building secure, compliant digital environments through governance, risk management, and AI-driven security solutions. Specializing in Saudi regulatory frameworks and international standards.": "أبني بيئات رقمية آمنة ومتوافقة من خلال الحوكمة وإدارة المخاطر والحلول الأمنية المدعومة بالذكاء الاصطناعي، مع تخصص في الأطر التنظيمية السعودية والمعايير الدولية.",
         "Connect on LinkedIn": "تواصل عبر لينكدإن",
         "View Certifications": "استعرض الشهادات",
@@ -21,10 +21,10 @@
         "Digital Forensics": "الأدلة الجنائية الرقمية",
         "RAG Systems": "أنظمة RAG",
         "About Me": "نبذة عني",
-        "Nusaybah AlHarbi": "نسيبة الحربي",
-        "Cybersecurity Lead based in Riyadh, Saudi Arabia": "قائدة أمن سيبراني في الرياض، المملكة العربية السعودية",
+        "Nusaybah AlHarbi": "نسيبه الحربي",
+        "Cybersecurity Lead based in Riyadh, Saudi Arabia": "قائد أمن سيبراني في الرياض، المملكة العربية السعودية",
         "Building Secure & Compliant Organizations": "بناء مؤسسات آمنة ومتوافقة",
-        "I'm a Cybersecurity Lead with deep expertise in governance, risk, and compliance. I help organizations navigate complex regulatory landscapes, build robust security programs, and achieve compliance with both Saudi frameworks and international standards.": "أنا قائدة في مجال الأمن السيبراني، أمتلك خبرة متعمقة في الحوكمة والمخاطر والامتثال. أساعد الجهات على التعامل مع المتطلبات التنظيمية المعقدة، وبناء برامج أمنية راسخة، وتحقيق الامتثال للأطر السعودية والمعايير الدولية.",
+        "I'm a Cybersecurity Lead with deep expertise in governance, risk, and compliance. I help organizations navigate complex regulatory landscapes, build robust security programs, and achieve compliance with both Saudi frameworks and international standards.": "أعمل في قيادة الأمن السيبراني بخبرة متعمقة في الحوكمة والمخاطر والامتثال. أساعد الجهات على التعامل مع المتطلبات التنظيمية المعقدة، وبناء برامج أمنية راسخة، وتحقيق الامتثال للأطر السعودية والمعايير الدولية.",
         "My work spans the full spectrum of GRC—from conducting enterprise risk assessments using ISO 31000 methodology to leading SOC 2 audit engagements and implementing NCA compliance programs. I combine this governance expertise with a passion for AI innovation, building intelligent tools that enhance security operations and compliance workflows.": "يغطي عملي منظومة الحوكمة والمخاطر والامتثال بالكامل؛ من تنفيذ تقييمات المخاطر المؤسسية وفق منهجية ISO 31000، إلى قيادة ارتباطات تدقيق SOC 2 وتطبيق برامج الامتثال لضوابط الهيئة الوطنية للأمن السيبراني. وأجمع بين هذه الخبرة وشغفي بابتكار حلول ذكاء اصطناعي تعزز العمليات الأمنية ومسارات عمل الامتثال.",
         "With a foundation in digital forensics and hands-on technical experience, I bridge the gap between security strategy and implementation, bringing both leadership thinking and practical execution to every engagement.": "وبفضل أساس قوي في الأدلة الجنائية الرقمية وخبرة تقنية عملية، أربط بين استراتيجية الأمن السيبراني والتنفيذ، وأقدّم في كل مهمة رؤية قيادية وقدرة تطبيقية.",
         "GRC Leadership": "قيادة الحوكمة والمخاطر والامتثال",
@@ -38,22 +38,22 @@
         "Career": "المسيرة المهنية",
         "Professional Experience": "الخبرات المهنية",
         "Building security programs and driving compliance excellence": "بناء برامج أمنية راسخة والارتقاء بكفاءة الامتثال",
-        "Cybersecurity Lead": "قائدة الأمن السيبراني",
+        "Cybersecurity Lead": "قائد الأمن السيبراني",
         "Jun 2026 – Present": "يونيو 2026 – حتى الآن",
         "Leading cybersecurity governance, risk, and compliance activities for a SAMA-regulated financial institution. Driving implementation of the SAMA Cyber Security Framework (CSF), cybersecurity maturity initiatives, regulatory compliance programs, risk assessments, third-party security reviews, and audit readiness activities. Managing cybersecurity policies, standards, awareness programs, and executive reporting while supporting the organization's Cybersecurity Maturity Level (ML3) objectives.": "قيادة أعمال حوكمة الأمن السيبراني وإدارة المخاطر والامتثال لدى مؤسسة مالية خاضعة لإشراف البنك المركزي السعودي. قيادة تطبيق إطار الأمن السيبراني لـSAMA، ومبادرات رفع النضج السيبراني، وبرامج الامتثال التنظيمي، وتقييمات المخاطر، ومراجعات أمن الأطراف الخارجية، والاستعداد للتدقيق. إدارة سياسات ومعايير الأمن السيبراني وبرامج التوعية والتقارير التنفيذية، مع دعم مستهدفات مستوى النضج السيبراني الثالث (ML3).",
         "Cybersecurity Governance": "حوكمة الأمن السيبراني",
         "Third-Party Risk": "مخاطر الأطراف الخارجية",
         "Fintech": "التقنية المالية",
-        "Senior Cybersecurity GRC Specialist": "أخصائية أولى في حوكمة الأمن السيبراني والمخاطر والامتثال",
+        "Senior Cybersecurity GRC Specialist": "أخصائي أول في حوكمة الأمن السيبراني والمخاطر والامتثال",
         "Nov 2024 – Jun 2026": "نوفمبر 2024 – يونيو 2026",
         "Leading compliance initiatives across CST, NCA (ECC, CCC, CSCC, OTCC, DCC), SDAIA, and SAMA frameworks. Built and led a SOC 2 audit engagement from scratch—scoping, control mapping, and evidence collection. Delivering consulting services for ISO 27001, ISO 31000, and ISO 22301 implementation. Conducting enterprise risk assessments, building risk registers, performing business impact analysis, and driving third-party risk assessments against regulatory requirements.": "قيادة مبادرات الامتثال لأطر هيئة الاتصالات والفضاء والتقنية، والهيئة الوطنية للأمن السيبراني (ECC وCCC وCSCC وOTCC وDCC)، وسدايا، والبنك المركزي السعودي. تأسيس وقيادة ارتباط تدقيق SOC 2 من الصفر، بدءًا من تحديد النطاق وربط الضوابط وصولًا إلى جمع الأدلة. تقديم خدمات استشارية لتطبيق ISO 27001 وISO 31000 وISO 22301، وتنفيذ تقييمات المخاطر المؤسسية، وبناء سجلات المخاطر، وتحليل أثر الأعمال، وقيادة تقييمات مخاطر الأطراف الخارجية وفق المتطلبات التنظيمية.",
-        "Cybersecurity Specialist": "أخصائية أمن سيبراني",
+        "Cybersecurity Specialist": "أخصائي أمن سيبراني",
         "Cybersecurity Club, University of Prince Muqrin": "نادي الأمن السيبراني، جامعة الأمير مقرن",
         "Jul 2022 – Jun 2024": "يوليو 2022 – يونيو 2024",
         "Designed and delivered technical training programs simulating real-world attack and defense scenarios. Led Capture The Flag competitions and hands-on labs using Python, Java, C++, and JavaScript to build practical security skills among participants.": "تصميم وتقديم برامج تدريبية تقنية تحاكي سيناريوهات الهجوم والدفاع الواقعية. قيادة مسابقات التقاط العلم ومختبرات عملية باستخدام Python وJava وC++ وJavaScript لبناء مهارات أمنية تطبيقية لدى المشاركين.",
         "Security Training": "التدريب الأمني",
         "Red Team": "الفريق الأحمر",
-        "Cybersecurity Forensic Investigator": "محققة أدلة جنائية رقمية",
+        "Cybersecurity Forensic Investigator": "محقق أدلة جنائية رقمية",
         "Ministry of Interior": "وزارة الداخلية",
         "Jun 2023 – Aug 2023": "يونيو 2023 – أغسطس 2023",
         "Supported sensitive digital forensic investigations under strict confidentiality protocols. Managed the complete evidence lifecycle—acquisition, preservation, analysis, and chain-of-custody documentation. Delivered comprehensive forensic reports to confidential committee members for high-impact investigative cases.": "دعم تحقيقات حساسة في الأدلة الجنائية الرقمية وفق بروتوكولات صارمة للسرية. إدارة دورة حياة الدليل كاملة، بما يشمل الاستحواذ والحفظ والتحليل وتوثيق سلسلة الحيازة، وإعداد تقارير جنائية رقمية شاملة للجان مختصة في قضايا تحقيقية عالية الأثر.",
@@ -161,7 +161,7 @@
         "Connect": "تواصل",
         "Let's Connect": "لنتواصل",
         "Interested in discussing cybersecurity, GRC, or AI innovation? Find me on LinkedIn.": "هل ترغب في مناقشة الأمن السيبراني أو الحوكمة والمخاطر والامتثال أو ابتكارات الذكاء الاصطناعي؟ تواصل معي عبر لينكدإن.",
-        "Nusaybah AlHarbi. All rights reserved.": "نسيبة الحربي. جميع الحقوق محفوظة.",
+        "Nusaybah AlHarbi. All rights reserved.": "نسيبه الحربي. جميع الحقوق محفوظة.",
         "Riyadh, Saudi Arabia": "الرياض، المملكة العربية السعودية"
     };
 
@@ -207,7 +207,7 @@
         currentLanguage = lang;
         document.documentElement.lang = lang;
         document.documentElement.dir = isArabic ? 'rtl' : 'ltr';
-        document.title = isArabic ? 'نسيبة الحربي | قائدة أمن سيبراني' : 'Nusaybah AlHarbi | Cybersecurity Lead';
+        document.title = isArabic ? 'نسيبه الحربي | قائد أمن سيبراني' : 'Nusaybah AlHarbi | Cybersecurity Lead';
         document.documentElement.style.setProperty('--latest-label', isArabic ? '"الأحدث"' : '"LATEST"');
 
         textNodes.forEach(item => {
@@ -218,9 +218,9 @@
         const heroTitle = document.querySelector('.hero h1');
         const heroAccent = heroTitle?.querySelector('.gradient-text');
         if (heroTitle && heroAccent) {
-            heroTitle.firstChild.nodeValue = isArabic ? 'قائدة في الأمن ' : 'Cybersecurity ';
+            heroTitle.firstChild.nodeValue = isArabic ? 'قائد في الأمن ' : 'Cybersecurity ';
             heroAccent.firstChild.nodeValue = isArabic ? 'السيبراني' : 'Lead';
-            heroTitle.lastChild.nodeValue = isArabic ? ' ومبتكرة في الذكاء الاصطناعي' : ' & AI Innovator';
+            heroTitle.lastChild.nodeValue = isArabic ? ' ومبتكر في الذكاء الاصطناعي' : ' & AI Innovator';
         }
 
         attributes.forEach(item => {
