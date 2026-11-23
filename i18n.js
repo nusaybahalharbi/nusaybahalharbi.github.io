@@ -1,4 +1,7 @@
 (() => {
+    // Defensive cleanup for browsers restoring an older HTML snapshot.
+    document.querySelector('.language-switch')?.remove();
+
     const ar = {
         "Skip to main content": "انتقل إلى المحتوى الرئيسي",
         "About": "نبذة عني",
