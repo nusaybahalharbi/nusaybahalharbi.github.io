@@ -1338,6 +1338,7 @@
             box-shadow: 0 16px 60px rgba(0,0,0,.25);
         }
         .logo { letter-spacing: -.035em; }
+        .logo { direction: ltr; unicode-bidi: isolate; }
         .logo::after { content: '◆'; color: var(--green); font-size: .55rem; margin-left: .5rem; vertical-align: middle; }
         .nav-links a { color: #d7e8ec; font-weight: 600; }
         .nav-links a:hover { color: var(--white); }
@@ -1482,6 +1483,7 @@
         html[dir="rtl"] .credential-filter { text-align: right; }
         html[dir="rtl"] .project-card[dir="rtl"] { direction: rtl; }
         html[dir="ltr"] .project-card[dir="rtl"] { direction: ltr; }
+        html[dir="rtl"] .hero h1 { line-height: 1.18; }
 
         @media (max-width: 900px) {
             nav { width: calc(100% - 1rem); margin-top: .4rem; }
@@ -1498,6 +1500,7 @@
             .language-switch { margin-inline-start: auto; }
             .lang-btn { min-height: 36px; padding: .4rem .58rem; }
             .hero { padding-top: calc(8.5rem + env(safe-area-inset-top)); }
+            html[dir="rtl"] .hero h1 { font-size: clamp(2.8rem, 11.5vw, 4.8rem); }
             .hero-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: .75rem; }
             .stat-number { font-size: 1.9rem; }
             .stat-label { font-size: .72rem; line-height: 1.35; }
