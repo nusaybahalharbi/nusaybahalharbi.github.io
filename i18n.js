@@ -215,6 +215,14 @@
             replaceNodeText(item, translated);
         });
 
+        const heroTitle = document.querySelector('.hero h1');
+        const heroAccent = heroTitle?.querySelector('.gradient-text');
+        if (heroTitle && heroAccent) {
+            heroTitle.firstChild.nodeValue = isArabic ? 'قائدة في الأمن ' : 'Cybersecurity ';
+            heroAccent.firstChild.nodeValue = isArabic ? 'السيبراني' : 'Lead';
+            heroTitle.lastChild.nodeValue = isArabic ? ' ومبتكرة في الذكاء الاصطناعي' : ' & AI Innovator';
+        }
+
         attributes.forEach(item => {
             const element = document.querySelector(item.selector);
             if (element) element.setAttribute(item.attr, isArabic ? item.ar : item.en);
